@@ -1,0 +1,9 @@
+Given the previous prompt and a failure case, propose a new prompt that improves reasoning or accuracy.
+
+Previous Prompt:
+{prompt}
+
+Failure Case:
+{failure}
+
+Improved Prompt:

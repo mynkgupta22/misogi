@@ -1,0 +1,5 @@
+Let’s solve the problem step by step.  
+Q: A student has 5 notebooks. Each notebook costs ₹40. What is the total cost?  
+A: First, identify the number of notebooks = 5  
+Each costs ₹40, so total cost = 5 × ₹40 = ₹200  
+Final Answer: ₹200

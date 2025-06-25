@@ -1,0 +1,27 @@
+[
+  {
+    "id": "task_1",
+    "description": "Solve: A train travels 120 km in 2 hours. What is its average speed?",
+    "solution": "Speed = Distance / Time = 120 / 2 = 60 km/h"
+  },
+  {
+    "id": "task_2",
+    "description": "Logic Puzzle: If all Bloops are Razzies and all Razzies are Lazzies, are all Bloops definitely Lazzies?",
+    "solution": "Yes, because of the transitive property of logic."
+  },
+  {
+    "id": "task_3",
+    "description": "Debug: What's wrong with this code? def add(x, y): return x - y",
+    "solution": "The code subtracts instead of adding. It should return x + y."
+  },
+  {
+    "id": "task_4",
+    "description": "Solve: What is the next number in the series? 2, 4, 8, 16, ?",
+    "solution": "32 \u2013 it's a power of 2 sequence."
+  },
+  {
+    "id": "task_5",
+    "description": "Code Debug: Fix this \u2013 for i in range(5): print i",
+    "solution": "Use print(i) for Python 3 compatibility."
+  }
+]

@@ -1,0 +1,10 @@
+Example 1:  
+Q: A bus covers 100 km in 2 hours. What is its speed?  
+A: Speed = Distance / Time = 100 / 2 = 50 km/h
+
+Example 2:  
+Q: There are 3 boxes, each with 12 chocolates. How many chocolates are there in total?  
+A: 3 × 12 = 36 chocolates
+
+Now solve this:  
+A student has 5 notebooks. Each notebook costs ₹40. What is the total cost?

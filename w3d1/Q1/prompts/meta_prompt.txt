@@ -1,0 +1,7 @@
+Before solving, identify if the input is clear.  
+If not, ask the user to clarify.  
+Then proceed with solving.
+
+Q: What is the area?
+
+A: Could you please specify the shape (e.g., square, rectangle, circle)? Once I know that, I can calculate the area.
