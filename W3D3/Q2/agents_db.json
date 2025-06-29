@@ -1,0 +1,357 @@
+{
+  "agents": [
+    {
+      "id": "github_copilot",
+      "name": "GitHub Copilot",
+      "description": "AI-powered code completion tool that suggests whole lines or blocks of code as you type",
+      "capabilities": [
+        "Real-time code completion",
+        "Multi-language support",
+        "IDE integration",
+        "Context-aware suggestions",
+        "Documentation generation"
+      ],
+      "strengths": [
+        "Excellent for rapid prototyping",
+        "Great IDE integration",
+        "Strong in popular languages (Python, JavaScript, Java)",
+        "Good at boilerplate code",
+        "Real-time assistance"
+      ],
+      "weaknesses": [
+        "Limited to code completion",
+        "No direct file manipulation",
+        "Requires good prompts",
+        "Can generate incorrect code",
+        "Limited to supported IDEs"
+      ],
+      "best_for": [
+        "Rapid development",
+        "Boilerplate code generation",
+        "Learning new frameworks",
+        "Code documentation",
+        "IDE-based development"
+      ],
+      "system_prompt": "You are GitHub Copilot, an AI assistant that helps developers write code faster. You provide intelligent code completions and suggestions based on the current context and best practices.",
+      "score_weights": {
+        "code_completion": 0.9,
+        "ide_integration": 0.8,
+        "multi_language": 0.7,
+        "real_time": 0.9,
+        "complex_problem_solving": 0.4,
+        "file_management": 0.2,
+        "debugging": 0.3,
+        "testing": 0.4
+      }
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "description": "AI-first code editor with advanced AI capabilities for code generation, editing, and debugging",
+      "capabilities": [
+        "Full code generation",
+        "File creation and editing",
+        "Debugging assistance",
+        "Code explanation",
+        "Refactoring",
+        "Multi-file operations",
+        "Chat interface"
+      ],
+      "strengths": [
+        "Complete code generation",
+        "File system operations",
+        "Advanced debugging",
+        "Multi-file context",
+        "Chat-based interaction",
+        "Strong problem-solving"
+      ],
+      "weaknesses": [
+        "Requires subscription",
+        "Can be resource-intensive",
+        "Learning curve for advanced features",
+        "Limited to supported languages"
+      ],
+      "best_for": [
+        "Complete project development",
+        "Complex problem solving",
+        "Code refactoring",
+        "Debugging complex issues",
+        "Learning new technologies"
+      ],
+      "system_prompt": "You are Cursor, an AI-powered code editor. You can generate complete code, edit files, debug issues, and help with complex programming tasks. You have access to the entire codebase and can perform file operations.",
+      "score_weights": {
+        "code_completion": 0.8,
+        "ide_integration": 0.9,
+        "multi_language": 0.8,
+        "real_time": 0.7,
+        "complex_problem_solving": 0.9,
+        "file_management": 0.9,
+        "debugging": 0.8,
+        "testing": 0.7
+      }
+    },
+    {
+      "id": "replit_ghost",
+      "name": "Replit Ghost",
+      "description": "AI coding assistant integrated into Replit's online IDE with collaborative features",
+      "capabilities": [
+        "Online code generation",
+        "Collaborative coding",
+        "Deployment assistance",
+        "Multi-language support",
+        "Real-time collaboration",
+        "Cloud-based development"
+      ],
+      "strengths": [
+        "No setup required",
+        "Collaborative features",
+        "Built-in deployment",
+        "Cloud-based",
+        "Good for beginners",
+        "Multi-language support"
+      ],
+      "weaknesses": [
+        "Requires internet connection",
+        "Limited offline capabilities",
+        "Performance depends on connection",
+        "Less powerful than desktop IDEs"
+      ],
+      "best_for": [
+        "Online collaboration",
+        "Quick prototyping",
+        "Learning programming",
+        "Web development",
+        "Educational projects"
+      ],
+      "system_prompt": "You are Replit Ghost, an AI assistant integrated into Replit's online IDE. You help users write code, collaborate on projects, and deploy applications in the cloud.",
+      "score_weights": {
+        "code_completion": 0.7,
+        "ide_integration": 0.8,
+        "multi_language": 0.7,
+        "real_time": 0.6,
+        "complex_problem_solving": 0.6,
+        "file_management": 0.7,
+        "debugging": 0.5,
+        "testing": 0.6
+      }
+    },
+    {
+      "id": "aws_codewhisperer",
+      "name": "AWS CodeWhisperer",
+      "description": "AI-powered coding companion with AWS integration and security scanning",
+      "capabilities": [
+        "Code generation",
+        "AWS service integration",
+        "Security scanning",
+        "IDE integration",
+        "Multi-language support",
+        "Best practices suggestions"
+      ],
+      "strengths": [
+        "AWS integration",
+        "Security focus",
+        "Enterprise features",
+        "Good for cloud development",
+        "Security scanning"
+      ],
+      "weaknesses": [
+        "Limited to AWS ecosystem",
+        "Requires AWS account",
+        "Less general-purpose",
+        "Limited to supported IDEs"
+      ],
+      "best_for": [
+        "AWS development",
+        "Cloud applications",
+        "Enterprise projects",
+        "Security-focused development",
+        "Serverless applications"
+      ],
+      "system_prompt": "You are AWS CodeWhisperer, an AI coding companion with deep AWS integration. You help developers build secure, scalable applications using AWS services and best practices.",
+      "score_weights": {
+        "code_completion": 0.7,
+        "ide_integration": 0.7,
+        "multi_language": 0.6,
+        "real_time": 0.7,
+        "complex_problem_solving": 0.6,
+        "file_management": 0.5,
+        "debugging": 0.6,
+        "testing": 0.5
+      }
+    },
+    {
+      "id": "claude_sonnet",
+      "name": "Claude Sonnet (Anthropic)",
+      "description": "Advanced AI assistant with strong reasoning capabilities and code generation",
+      "capabilities": [
+        "Advanced reasoning",
+        "Code generation",
+        "Problem analysis",
+        "Multi-step problem solving",
+        "Documentation writing",
+        "Code review"
+      ],
+      "strengths": [
+        "Excellent reasoning",
+        "Strong problem analysis",
+        "Good at complex tasks",
+        "High-quality code",
+        "Comprehensive explanations"
+      ],
+      "weaknesses": [
+        "No direct IDE integration",
+        "Requires manual copy-paste",
+        "No file operations",
+        "Slower iteration cycle"
+      ],
+      "best_for": [
+        "Complex problem solving",
+        "Algorithm design",
+        "Code review",
+        "Architecture planning",
+        "Learning and explanation"
+      ],
+      "system_prompt": "You are Claude Sonnet, an AI assistant with strong reasoning capabilities. You excel at analyzing complex problems, generating high-quality code, and providing detailed explanations.",
+      "score_weights": {
+        "code_completion": 0.6,
+        "ide_integration": 0.3,
+        "multi_language": 0.8,
+        "real_time": 0.4,
+        "complex_problem_solving": 0.9,
+        "file_management": 0.2,
+        "debugging": 0.7,
+        "testing": 0.6
+      }
+    },
+    {
+      "id": "gpt4",
+      "name": "GPT-4 (OpenAI)",
+      "description": "Advanced language model with strong coding capabilities and broad knowledge",
+      "capabilities": [
+        "Code generation",
+        "Problem solving",
+        "Multi-language support",
+        "Code explanation",
+        "Debugging assistance",
+        "Best practices guidance"
+      ],
+      "strengths": [
+        "Broad knowledge base",
+        "Strong reasoning",
+        "Good code quality",
+        "Comprehensive responses",
+        "Multi-language expertise"
+      ],
+      "weaknesses": [
+        "No direct IDE integration",
+        "Requires manual copy-paste",
+        "No file operations",
+        "Can be expensive for heavy use"
+      ],
+      "best_for": [
+        "General programming tasks",
+        "Learning new languages",
+        "Code explanation",
+        "Problem solving",
+        "Best practices guidance"
+      ],
+      "system_prompt": "You are GPT-4, an advanced AI assistant with broad knowledge and strong coding capabilities. You can help with various programming tasks, explain concepts, and generate high-quality code.",
+      "score_weights": {
+        "code_completion": 0.7,
+        "ide_integration": 0.3,
+        "multi_language": 0.9,
+        "real_time": 0.4,
+        "complex_problem_solving": 0.8,
+        "file_management": 0.2,
+        "debugging": 0.6,
+        "testing": 0.6
+      }
+    },
+    {
+      "id": "tabnine",
+      "name": "Tabnine",
+      "description": "AI code completion tool with local and cloud-based models",
+      "capabilities": [
+        "Code completion",
+        "Local model support",
+        "Multi-language support",
+        "IDE integration",
+        "Custom model training"
+      ],
+      "strengths": [
+        "Privacy-focused (local models)",
+        "Good IDE integration",
+        "Customizable",
+        "Offline capabilities",
+        "Team learning"
+      ],
+      "weaknesses": [
+        "Limited to completion",
+        "Less advanced than newer models",
+        "Requires training data",
+        "Limited problem-solving"
+      ],
+      "best_for": [
+        "Privacy-conscious development",
+        "Team-specific code patterns",
+        "Offline development",
+        "Code completion",
+        "Custom AI models"
+      ],
+      "system_prompt": "You are Tabnine, an AI code completion tool that learns from your codebase. You provide intelligent code suggestions based on your project's patterns and best practices.",
+      "score_weights": {
+        "code_completion": 0.8,
+        "ide_integration": 0.7,
+        "multi_language": 0.6,
+        "real_time": 0.8,
+        "complex_problem_solving": 0.3,
+        "file_management": 0.2,
+        "debugging": 0.3,
+        "testing": 0.3
+      }
+    },
+    {
+      "id": "kite",
+      "name": "Kite",
+      "description": "AI-powered coding assistant with focus on Python and JavaScript",
+      "capabilities": [
+        "Code completion",
+        "Documentation lookup",
+        "Multi-file context",
+        "Python/JS focus",
+        "IDE integration"
+      ],
+      "strengths": [
+        "Excellent for Python/JS",
+        "Good documentation integration",
+        "Multi-file context",
+        "Fast completion",
+        "Lightweight"
+      ],
+      "weaknesses": [
+        "Limited language support",
+        "No complex problem solving",
+        "Limited to completion",
+        "Discontinued development"
+      ],
+      "best_for": [
+        "Python development",
+        "JavaScript development",
+        "Documentation lookup",
+        "Quick completions",
+        "Lightweight development"
+      ],
+      "system_prompt": "You are Kite, an AI coding assistant specialized in Python and JavaScript. You provide fast code completions and help with documentation lookup.",
+      "score_weights": {
+        "code_completion": 0.8,
+        "ide_integration": 0.7,
+        "multi_language": 0.4,
+        "real_time": 0.9,
+        "complex_problem_solving": 0.2,
+        "file_management": 0.3,
+        "debugging": 0.3,
+        "testing": 0.3
+      }
+    }
+  ]
+} 

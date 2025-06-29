@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coding Agent Recommender</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <i class="fas fa-robot"></i>
+                    AI Coding Agent Recommender
+                </h1>
+                <p class="subtitle">Find the perfect AI coding assistant for your task</p>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Task Input Section -->
+            <section class="task-input-section">
+                <div class="card">
+                    <h2 class="card-title">
+                        <i class="fas fa-tasks"></i>
+                        Describe Your Task
+                    </h2>
+                    <form id="taskForm" class="task-form">
+                        <div class="form-group">
+                            <label for="taskDescription" class="form-label">
+                                What are you trying to build or accomplish?
+                            </label>
+                            <textarea 
+                                id="taskDescription" 
+                                name="taskDescription" 
+                                class="form-textarea" 
+                                placeholder="Describe your programming task in detail. For example: 'I need to build a REST API with Python Flask that handles user authentication and connects to a PostgreSQL database. The API should include JWT tokens and input validation.'"
+                                rows="6"
+                                required
+                            ></textarea>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-primary" id="submitBtn">
+                                <i class="fas fa-search"></i>
+                                Get Recommendations
+                            </button>
+                            <button type="button" class="btn btn-secondary" id="clearBtn">
+                                <i class="fas fa-eraser"></i>
+                                Clear
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+
+            <!-- Loading Section -->
+            <section class="loading-section" id="loadingSection" style="display: none;">
+                <div class="card">
+                    <div class="loading-content">
+                        <div class="spinner"></div>
+                        <h3>Analyzing your task...</h3>
+                        <p>Finding the best AI coding agents for your needs</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Results Section -->
+            <section class="results-section" id="resultsSection" style="display: none;">
+                <div class="card">
+                    <h2 class="card-title">
+                        <i class="fas fa-star"></i>
+                        Top Recommendations
+                    </h2>
+                    
+                    <!-- Task Analysis -->
+                    <div class="task-analysis" id="taskAnalysis">
+                        <h3>Task Analysis</h3>
+                        <div class="analysis-grid" id="analysisGrid"></div>
+                    </div>
+
+                    <!-- Recommendations -->
+                    <div class="recommendations" id="recommendations">
+                        <div class="recommendations-grid" id="recommendationsGrid"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Error Section -->
+            <section class="error-section" id="errorSection" style="display: none;">
+                <div class="card error-card">
+                    <div class="error-content">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Oops! Something went wrong</h3>
+                        <p id="errorMessage"></p>
+                        <button class="btn btn-primary" onclick="hideError()">Try Again</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 AI Coding Agent Recommender. Built with ❤️ for developers.</p>
+                <a href="/agents" class="footer-link">
+                    <i class="fas fa-list"></i>
+                    View All Agents
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/app.js') }}"></script>
+</body>
+</html> 

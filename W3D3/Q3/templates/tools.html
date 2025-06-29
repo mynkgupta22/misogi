@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Coding Tools - Adaptive Prompt Optimizer</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <i class="fas fa-tools"></i>
+                    AI Coding Tools
+                </h1>
+                <p class="subtitle">Explore all supported AI coding tools and their optimization strategies</p>
+                <a href="/" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Optimizer
+                </a>
+            </div>
+        </header>
+
+        <!-- Tools Grid -->
+        <section class="tools-section">
+            <div class="tools-grid" id="toolsGrid">
+                {% for tool in tools %}
+                <div class="tool-card" data-tool-id="{{ tool.id }}">
+                    <div class="tool-header">
+                        <h3 class="tool-name">{{ tool.name }}</h3>
+                        <div class="tool-badge">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    
+                    <p class="tool-description">{{ tool.description }}</p>
+                    
+                    <div class="tool-capabilities">
+                        <h4>Capabilities</h4>
+                        <div class="capabilities-list">
+                            {% for capability in tool.capabilities %}
+                            <span class="capability-tag">{{ capability }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    <div class="tool-optimization-strategies">
+                        <h4>Optimization Strategies</h4>
+                        {% for strategy_name, strategy in tool.optimization_strategies.items() %}
+                        <div class="strategy-item">
+                            <h5>{{ strategy_name.replace('_', ' ').title() }}</h5>
+                            <p>{{ strategy.description }}</p>
+                            <ul class="techniques-list">
+                                {% for technique in strategy.techniques %}
+                                <li><i class="fas fa-check"></i> {{ technique }}</li>
+                                {% endfor %}
+                            </ul>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    
+                    <div class="tool-best-practices">
+                        <h4>Best Practices</h4>
+                        <ul class="best-practices-list">
+                            {% for practice in tool.best_practices %}
+                            <li><i class="fas fa-star"></i> {{ practice }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    <div class="tool-limitations">
+                        <h4>Limitations</h4>
+                        <ul class="limitations-list">
+                            {% for limitation in tool.limitations %}
+                            <li><i class="fas fa-exclamation-triangle"></i> {{ limitation }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    <div class="tool-example">
+                        <h4>Example Optimization</h4>
+                        <div class="example-container">
+                            <div class="example-before">
+                                <h5>Before</h5>
+                                <p>{{ tool.example_optimizations.before }}</p>
+                            </div>
+                            <div class="example-arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="example-after">
+                                <h5>After</h5>
+                                <p>{{ tool.example_optimizations.after }}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 Adaptive Prompt Optimizer. Built with ❤️ for developers.</p>
+                <a href="/" class="footer-link">
+                    <i class="fas fa-home"></i>
+                    Back to Home
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/tools.js') }}"></script>
+</body>
+</html> 

@@ -1,0 +1,359 @@
+{
+  "tools": [
+    {
+      "id": "github_copilot",
+      "name": "GitHub Copilot",
+      "description": "AI-powered code completion tool that suggests whole lines or blocks of code as you type",
+      "capabilities": [
+        "Real-time code completion",
+        "Multi-language support",
+        "IDE integration",
+        "Context-aware suggestions",
+        "Documentation generation",
+        "Inline code suggestions"
+      ],
+      "optimization_strategies": {
+        "context_enhancement": {
+          "description": "Add more context about the current file, imports, and surrounding code",
+          "techniques": [
+            "Include relevant imports and dependencies",
+            "Reference existing functions and variables",
+            "Specify the programming language explicitly",
+            "Add comments about the intended functionality"
+          ]
+        },
+        "specificity_improvement": {
+          "description": "Make prompts more specific and detailed",
+          "techniques": [
+            "Specify exact function signatures",
+            "Include expected input/output types",
+            "Mention specific libraries or frameworks",
+            "Add error handling requirements"
+          ]
+        },
+        "style_guidelines": {
+          "description": "Follow Copilot's preferred prompt style",
+          "techniques": [
+            "Use clear, concise language",
+            "Start with 'Create a function that...' or 'Write code to...'",
+            "Include examples of expected output",
+            "Specify coding standards (PEP 8, etc.)"
+          ]
+        }
+      },
+      "best_practices": [
+        "Provide clear function/class names",
+        "Include type hints when possible",
+        "Specify error handling requirements",
+        "Mention specific libraries or frameworks",
+        "Add context about the current codebase"
+      ],
+      "limitations": [
+        "Limited to code completion",
+        "Requires good context",
+        "May generate incorrect code",
+        "Limited to supported IDEs"
+      ],
+      "example_optimizations": {
+        "before": "write a function to sort a list",
+        "after": "Create a Python function called `sort_list` that takes a list of integers as input and returns a sorted list in ascending order. Include type hints and handle edge cases like empty lists."
+      }
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor",
+      "description": "AI-first code editor with advanced AI capabilities for code generation, editing, and debugging",
+      "capabilities": [
+        "Full code generation",
+        "File creation and editing",
+        "Debugging assistance",
+        "Code explanation",
+        "Refactoring",
+        "Multi-file operations",
+        "Chat interface",
+        "Complex problem solving"
+      ],
+      "optimization_strategies": {
+        "comprehensive_planning": {
+          "description": "Provide detailed project structure and requirements",
+          "techniques": [
+            "Outline the complete project structure",
+            "Specify file organization",
+            "Include database schemas if applicable",
+            "Mention deployment requirements"
+          ]
+        },
+        "step_by_step_guidance": {
+          "description": "Break down complex tasks into steps",
+          "techniques": [
+            "List specific implementation steps",
+            "Include testing requirements",
+            "Specify error handling at each step",
+            "Mention performance considerations"
+          ]
+        },
+        "context_rich_prompts": {
+          "description": "Include extensive context and requirements",
+          "techniques": [
+            "Describe the overall architecture",
+            "Include user stories or requirements",
+            "Specify technology stack details",
+            "Mention integration points"
+          ]
+        }
+      },
+      "best_practices": [
+        "Provide detailed project requirements",
+        "Include architecture decisions",
+        "Specify testing strategies",
+        "Mention performance requirements",
+        "Include error handling scenarios"
+      ],
+      "limitations": [
+        "Requires subscription",
+        "Can be resource-intensive",
+        "Learning curve for advanced features"
+      ],
+      "example_optimizations": {
+        "before": "build a todo app",
+        "after": "Create a full-stack todo application with React frontend and Node.js backend. Include user authentication, CRUD operations for todos, real-time updates, and MongoDB database. The app should have a modern UI with drag-and-drop functionality and support for todo categories and priorities."
+      }
+    },
+    {
+      "id": "replit_ghost",
+      "name": "Replit Ghost",
+      "description": "AI coding assistant integrated into Replit's online IDE with collaborative features",
+      "capabilities": [
+        "Online code generation",
+        "Collaborative coding",
+        "Deployment assistance",
+        "Multi-language support",
+        "Real-time collaboration",
+        "Cloud-based development",
+        "Built-in hosting"
+      ],
+      "optimization_strategies": {
+        "collaboration_focus": {
+          "description": "Emphasize collaborative and educational aspects",
+          "techniques": [
+            "Mention team collaboration needs",
+            "Include learning objectives",
+            "Specify sharing and deployment requirements",
+            "Add comments for educational purposes"
+          ]
+        },
+        "deployment_ready": {
+          "description": "Include deployment and hosting considerations",
+          "techniques": [
+            "Specify hosting requirements",
+            "Include environment setup",
+            "Mention database hosting",
+            "Add deployment instructions"
+          ]
+        },
+        "educational_context": {
+          "description": "Add educational context and explanations",
+          "techniques": [
+            "Include learning objectives",
+            "Add detailed comments",
+            "Explain complex concepts",
+            "Include best practices explanations"
+          ]
+        }
+      },
+      "best_practices": [
+        "Include deployment requirements",
+        "Add educational comments",
+        "Specify collaboration features",
+        "Mention hosting considerations",
+        "Include learning objectives"
+      ],
+      "limitations": [
+        "Requires internet connection",
+        "Limited offline capabilities",
+        "Performance depends on connection"
+      ],
+      "example_optimizations": {
+        "before": "make a simple calculator",
+        "after": "Create an educational calculator web app that demonstrates basic arithmetic operations. Include step-by-step explanations for each calculation, a history feature to show previous calculations, and responsive design for mobile devices. Add comments explaining the math concepts and make it suitable for classroom use."
+      }
+    },
+    {
+      "id": "aws_codewhisperer",
+      "name": "AWS CodeWhisperer",
+      "description": "AI-powered coding companion with AWS integration and security scanning",
+      "capabilities": [
+        "Code generation",
+        "AWS service integration",
+        "Security scanning",
+        "IDE integration",
+        "Multi-language support",
+        "Best practices suggestions",
+        "AWS-specific patterns"
+      ],
+      "optimization_strategies": {
+        "aws_integration": {
+          "description": "Emphasize AWS services and cloud architecture",
+          "techniques": [
+            "Specify AWS services to use",
+            "Include cloud architecture patterns",
+            "Mention security best practices",
+            "Add AWS-specific configurations"
+          ]
+        },
+        "security_focus": {
+          "description": "Include security and compliance requirements",
+          "techniques": [
+            "Specify security requirements",
+            "Include compliance standards",
+            "Mention encryption needs",
+            "Add access control requirements"
+          ]
+        },
+        "cloud_native": {
+          "description": "Focus on cloud-native development patterns",
+          "techniques": [
+            "Use serverless patterns",
+            "Include microservices architecture",
+            "Mention scalability requirements",
+            "Add monitoring and logging"
+          ]
+        }
+      },
+      "best_practices": [
+        "Specify AWS services explicitly",
+        "Include security requirements",
+        "Mention compliance standards",
+        "Use cloud-native patterns",
+        "Include monitoring requirements"
+      ],
+      "limitations": [
+        "Limited to AWS ecosystem",
+        "Requires AWS account",
+        "Less general-purpose"
+      ],
+      "example_optimizations": {
+        "before": "create a web app",
+        "after": "Build a serverless web application using AWS Lambda, API Gateway, and DynamoDB. Include user authentication with AWS Cognito, file storage with S3, and CloudFront for content delivery. Implement security best practices with IAM roles, encryption at rest and in transit, and CloudWatch for monitoring."
+      }
+    },
+    {
+      "id": "claude_sonnet",
+      "name": "Claude Sonnet (Anthropic)",
+      "description": "Advanced AI assistant with strong reasoning capabilities and code generation",
+      "capabilities": [
+        "Advanced reasoning",
+        "Code generation",
+        "Problem analysis",
+        "Multi-step problem solving",
+        "Documentation writing",
+        "Code review",
+        "Complex algorithm design"
+      ],
+      "optimization_strategies": {
+        "reasoning_focus": {
+          "description": "Emphasize problem-solving and reasoning",
+          "techniques": [
+            "Break down complex problems",
+            "Include reasoning steps",
+            "Specify algorithm requirements",
+            "Add problem analysis"
+          ]
+        },
+        "comprehensive_explanation": {
+          "description": "Request detailed explanations and documentation",
+          "techniques": [
+            "Ask for step-by-step explanations",
+            "Include documentation requirements",
+            "Specify code comments",
+            "Add reasoning behind decisions"
+          ]
+        },
+        "algorithm_design": {
+          "description": "Focus on algorithm and data structure design",
+          "techniques": [
+            "Specify algorithm complexity requirements",
+            "Include data structure choices",
+            "Mention optimization needs",
+            "Add performance analysis"
+          ]
+        }
+      },
+      "best_practices": [
+        "Break down complex problems",
+        "Include reasoning requirements",
+        "Specify algorithm complexity",
+        "Request detailed explanations",
+        "Include documentation needs"
+      ],
+      "limitations": [
+        "No direct IDE integration",
+        "Requires manual copy-paste",
+        "No file operations"
+      ],
+      "example_optimizations": {
+        "before": "sort a list efficiently",
+        "after": "Design and implement an efficient sorting algorithm for a large dataset. Analyze the time and space complexity, compare different approaches (quicksort, mergesort, heapsort), and choose the optimal solution. Include detailed explanations of the algorithm's logic, edge cases, and performance characteristics."
+      }
+    },
+    {
+      "id": "gpt4",
+      "name": "GPT-4 (OpenAI)",
+      "description": "Advanced language model with strong coding capabilities and broad knowledge",
+      "capabilities": [
+        "Code generation",
+        "Problem solving",
+        "Multi-language support",
+        "Code explanation",
+        "Debugging assistance",
+        "Best practices guidance",
+        "Broad knowledge base"
+      ],
+      "optimization_strategies": {
+        "knowledge_leverage": {
+          "description": "Leverage GPT-4's broad knowledge base",
+          "techniques": [
+            "Include industry best practices",
+            "Mention specific frameworks or libraries",
+            "Reference design patterns",
+            "Include architectural decisions"
+          ]
+        },
+        "comprehensive_guidance": {
+          "description": "Request comprehensive solutions and explanations",
+          "techniques": [
+            "Ask for multiple approaches",
+            "Include pros and cons analysis",
+            "Request best practices",
+            "Add learning resources"
+          ]
+        },
+        "context_rich": {
+          "description": "Provide rich context and background",
+          "techniques": [
+            "Include project background",
+            "Specify business requirements",
+            "Mention user needs",
+            "Add technical constraints"
+          ]
+        }
+      },
+      "best_practices": [
+        "Provide comprehensive context",
+        "Include business requirements",
+        "Request multiple approaches",
+        "Ask for best practices",
+        "Include learning resources"
+      ],
+      "limitations": [
+        "No direct IDE integration",
+        "Requires manual copy-paste",
+        "No file operations"
+      ],
+      "example_optimizations": {
+        "before": "build a login system",
+        "after": "Design a comprehensive user authentication system for a web application. Consider security best practices, multiple authentication methods (email/password, OAuth, 2FA), session management, password policies, and compliance with GDPR/CCPA. Include error handling, logging, and monitoring. Provide multiple implementation approaches and explain the trade-offs."
+      }
+    }
+  ]
+} 

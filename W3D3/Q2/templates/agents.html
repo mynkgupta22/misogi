@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All AI Coding Agents - AI Coding Agent Recommender</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="title">
+                    <i class="fas fa-list"></i>
+                    All AI Coding Agents
+                </h1>
+                <p class="subtitle">Explore all available AI coding assistants and their capabilities</p>
+                <a href="/" class="btn btn-secondary">
+                    <i class="fas fa-arrow-left"></i>
+                    Back to Recommender
+                </a>
+            </div>
+        </header>
+
+        <!-- Search Section -->
+        <section class="search-section">
+            <div class="card">
+                <div class="search-container">
+                    <div class="search-input-group">
+                        <i class="fas fa-search search-icon"></i>
+                        <input 
+                            type="text" 
+                            id="searchInput" 
+                            class="search-input" 
+                            placeholder="Search agents by name, capabilities, or strengths..."
+                        >
+                    </div>
+                    <button class="btn btn-primary" id="searchBtn">
+                        <i class="fas fa-search"></i>
+                        Search
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Agents Grid -->
+        <section class="agents-section">
+            <div class="agents-grid" id="agentsGrid">
+                {% for agent in agents %}
+                <div class="agent-card" data-agent-id="{{ agent.id }}">
+                    <div class="agent-header">
+                        <h3 class="agent-name">{{ agent.name }}</h3>
+                        <div class="agent-badge">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    
+                    <p class="agent-description">{{ agent.description }}</p>
+                    
+                    <div class="agent-capabilities">
+                        <h4>Capabilities</h4>
+                        <div class="capabilities-list">
+                            {% for capability in agent.capabilities %}
+                            <span class="capability-tag">{{ capability }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    <div class="agent-strengths">
+                        <h4>Strengths</h4>
+                        <ul class="strengths-list">
+                            {% for strength in agent.strengths %}
+                            <li><i class="fas fa-check"></i> {{ strength }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    <div class="agent-weaknesses">
+                        <h4>Weaknesses</h4>
+                        <ul class="weaknesses-list">
+                            {% for weakness in agent.weaknesses %}
+                            <li><i class="fas fa-times"></i> {{ weakness }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    
+                    <div class="agent-best-for">
+                        <h4>Best For</h4>
+                        <div class="best-for-tags">
+                            {% for use_case in agent.best_for %}
+                            <span class="use-case-tag">{{ use_case }}</span>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    <div class="agent-scores">
+                        <h4>Capability Scores</h4>
+                        <div class="scores-grid">
+                            {% for capability, score in agent.score_weights.items() %}
+                            <div class="score-item">
+                                <span class="score-label">{{ capability.replace('_', ' ').title() }}</span>
+                                <div class="score-bar">
+                                    <div class="score-fill" style="width: {{ score * 100 }}%"></div>
+                                </div>
+                                <span class="score-value">{{ (score * 100) | int }}%</span>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    
+                    <div class="agent-system-prompt">
+                        <h4>System Prompt</h4>
+                        <div class="prompt-content">
+                            <p>{{ agent.system_prompt }}</p>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </section>
+
+        <!-- No Results -->
+        <section class="no-results" id="noResults" style="display: none;">
+            <div class="card">
+                <div class="no-results-content">
+                    <i class="fas fa-search"></i>
+                    <h3>No agents found</h3>
+                    <p>Try adjusting your search terms or browse all agents below.</p>
+                    <button class="btn btn-primary" onclick="clearSearch()">Show All Agents</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <p>&copy; 2024 AI Coding Agent Recommender. Built with ❤️ for developers.</p>
+                <a href="/" class="footer-link">
+                    <i class="fas fa-home"></i>
+                    Back to Home
+                </a>
+            </div>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='js/agents.js') }}"></script>
+</body>
+</html> 
