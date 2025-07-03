@@ -1,0 +1,103 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+ 📌 AI-Powered Product Recommendation System
+
+## 📝 Product Requirements Document (PRD)
+
+### 🎯 Goal:
+Build a multi-user web application that allows users to browse a product catalog (from a JSON file), interact with products (likes, views, purchases), and receive AI-powered product recommendations based on those interactions and product similarities.
+
+### 👤 Users:
+- Can register and log in
+- Can browse products by category
+- Can like, view, and purchase products
+- Receive personalized product recommendations
+
+### 🧠 Features:
+- Content-based recommendation engine
+- Tracks user interactions via local storage
+- Uses cosine similarity / TF-IDF for recommendation logic
+- FastAPI backend with REST API
+- React or Next.js frontend with dynamic rendering
+- Local storage used instead of a full database (for demo purposes)
+
+### 🧪 Testing:
+- Unit tests for FastAPI backend
+- Frontend interaction and logic tests
+## ✅ Tasks
+## ✅ Product Requirements
+
+- [x] Use mock JSON product dataset (100–200 items)
+- [x] Support multi-user authentication (register, login)
+- [x] Display product catalog categorized by type
+- [x] Track user interactions (likes, views, purchases)
+- [x] Implement recommendation engine (content-based filtering)
+- [x] Suggest products based on:
+  - [x] User preferences
+  - [x] Product metadata similarity
+  - [x] Viewed/purchased items
+
+## 🖥️ Backend (FastAPI)
+
+- [x] Setup FastAPI project
+- [x] Create user model & auth logic (JWT)
+- [x] Endpoints:
+  - [x] `/register` - Register user
+  - [x] `/login` - Login user
+  - [x] `/products` - Get product list
+  - [x] `/interactions` - Log views/likes/purchases
+  - [x] `/recommendations` - Get personalized recommendations
+- [x] Middleware to extract user from token
+- [x] Utility functions for:
+  - [x] TF-IDF or cosine similarity
+  - [x] Recommendation based on interaction history
+
+## 🧩 Frontend (React / Next.js)
+
+- [x] Setup Next.js project
+- [x] Auth pages:
+  - [x] Login page
+  - [x] Registration page
+- [x] Product UI:
+  - [x] Product listing with filters
+  - [x] Product details modal/page
+  - [x] Like / View / Purchase buttons
+- [x] Recommendation UI:
+  - [x] "Recommended for You" section
+  - [x] Personalized homepage
+
+## 🔁 Interaction Tracking (Local Storage)
+
+- [x] Store actions per user session:
+  - [x] `viewedProducts`
+  - [x] `likedProducts`
+  - [x] `purchasedProducts`
+- [x] Sync interactions with backend periodically
+
+## 🧠 Recommendation Engine (Basic)
+
+- [x] Parse product descriptions & categories
+- [x] Create product similarity matrix
+- [x] Recommend based on:
+  - [x] Products similar to liked/viewed items
+  - [x] Frequent product categories
+
+## 🧪 Testing
+
+- [ ] Backend unit tests:
+  - [ ] Auth flow
+  - [ ] Recommendation logic
+- [ ] Frontend test cases:
+  - [ ] Login/Register flow
+  - [ ] Interaction events
+
+## 📄 Documentation
+
+- [x] README.md
+  - [x] Project setup
+  - [x] API usage
+  - [x] How recommendations work
+- [x] Cursor session logs & dev notes
