@@ -1,0 +1,84 @@
+{
+    "documents": [
+        {
+            "id": "doc1",
+            "title": "The Benefits of Exercise",
+            "content": "Regular exercise is essential for maintaining good health. It improves cardiovascular fitness, strengthens muscles, and boosts mental well-being. Daily physical activity can help reduce stress and increase energy levels."
+        },
+        {
+            "id": "doc2",
+            "title": "Climate Change Impact",
+            "content": "Global temperatures are rising at an alarming rate. This has led to melting ice caps, rising sea levels, and extreme weather events. Urgent action is needed to address this critical environmental challenge."
+        },
+        {
+            "id": "doc3",
+            "title": "Healthy Eating Habits",
+            "content": "A balanced diet is crucial for maintaining good health. Eat plenty of fruits, vegetables, and whole grains. Limit processed foods and sugar intake. Stay hydrated by drinking enough water throughout the day."
+        },
+        {
+            "id": "doc4",
+            "title": "Technology in Education",
+            "content": "Modern technology has revolutionized education. Online learning platforms provide flexible access to knowledge. Students can now learn at their own pace and interact with educational content in new ways."
+        },
+        {
+            "id": "doc5",
+            "title": "Space Exploration",
+            "content": "Humans have always been fascinated by space. Recent advances in technology have made space exploration more accessible. Private companies are now joining government agencies in the quest to understand our universe."
+        },
+        {
+            "id": "doc6",
+            "title": "Mental Health Awareness",
+            "content": "Mental health is as important as physical health. Many people struggle with anxiety and depression. It's essential to seek help and support when needed. Breaking the stigma around mental health is crucial."
+        },
+        {
+            "id": "doc7",
+            "title": "Sustainable Living",
+            "content": "Living sustainably helps protect our planet. Simple changes like reducing plastic use and recycling can make a big difference. Everyone can contribute to creating a more sustainable future."
+        },
+        {
+            "id": "doc8",
+            "title": "The Digital Revolution",
+            "content": "Digital technology has transformed how we live and work. Social media connects people across the globe. However, we must also be mindful of screen time and digital well-being."
+        },
+        {
+            "id": "doc9",
+            "title": "Ocean Conservation",
+            "content": "Our oceans are under threat from pollution and overfishing. Marine ecosystems are delicate and need protection. We must act now to preserve these vital water bodies for future generations."
+        },
+        {
+            "id": "doc10",
+            "title": "The Future of Work",
+            "content": "Remote work is becoming increasingly common. Technology enables flexible working arrangements. Companies must adapt to changing workplace dynamics and employee expectations."
+        },
+        {
+            "id": "doc11",
+            "title": "Artificial Intelligence",
+            "content": "AI is reshaping industries and daily life. Machine learning algorithms are becoming more sophisticated. We need to consider both the benefits and ethical implications of AI development."
+        },
+        {
+            "id": "doc12",
+            "title": "Renewable Energy",
+            "content": "Renewable energy sources are crucial for a sustainable future. Solar and wind power are becoming more efficient and affordable. Many countries are investing heavily in green energy infrastructure."
+        },
+        {
+            "id": "doc13",
+            "title": "Urban Gardening",
+            "content": "Growing food in cities is gaining popularity. Urban gardens provide fresh produce and green spaces. Community gardens help build stronger neighborhoods and promote sustainability."
+        },
+        {
+            "id": "doc14",
+            "title": "Digital Privacy",
+            "content": "Protecting personal data is increasingly important. Cybersecurity threats are evolving rapidly. Users must be vigilant about their online privacy and security practices."
+        },
+        {
+            "id": "doc15",
+            "title": "The Power of Meditation",
+            "content": "Meditation can reduce stress and improve focus. Regular practice helps maintain emotional balance. Even a few minutes of daily meditation can have significant benefits."
+        },
+        {
+            "id": "sample_001",
+            "title": "Sample Business Report",
+            "content": "This is a sample business report analyzing quarterly performance. The company has shown steady growth over the past three months, with revenue increasing by 15% compared to the previous quarter. Key areas of success include improved customer satisfaction scores, which rose from 3.2 to 4.1 out of 5, and enhanced operational efficiency through automation initiatives. However, challenges remain in the supply chain management sector, where delays have impacted delivery times by an average of 2 days. The marketing department has successfully launched three new campaigns, resulting in a 25% increase in brand awareness. Moving forward, the company plans to invest in better logistics solutions and expand the customer service team to maintain this positive momentum."
+        }
+    ]
+}
