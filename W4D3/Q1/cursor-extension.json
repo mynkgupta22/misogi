@@ -1,0 +1,26 @@
+{
+  "name": "Discord MCP Server",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol server that enables AI models to interact with Discord",
+  "main": "run.py",
+  "processes": {
+    "Discord MCP Server": {
+      "command": "/Users/mayank/Desktop/misogi/W4D3/Q1/venv/bin/python",
+      "args": [
+        "/Users/mayank/Desktop/misogi/W4D3/Q1/run.py"
+      ],
+      "logLevel": "info",
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  },
+  "author": "Mayank",
+  "license": "MIT",
+  "engines": {
+    "cursor": ">=0.11.6"
+  },
+  "dependencies": {
+    "python": ">=3.10.0"
+  }
+} 
