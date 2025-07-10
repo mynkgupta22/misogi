@@ -1,0 +1,26 @@
+[
+  {
+    "content": "\n            # Pricing Plans\n            \n            Choose the plan that fits your needs:\n            \n            ## Basic Plan - $10/month\n            - 1000 API calls/day\n            - Email support\n            - Basic analytics\n            \n            ## Pro Plan - $50/month\n            - 10000 API calls/day\n            - Priority support\n            - Advanced analytics\n            - Custom integrations\n            \n            ## Enterprise Plan\n            - Unlimited API calls\n            - 24/7 support\n            - Dedicated account manager\n            - Custom features\n            ",
+    "metadata": {
+      "title": "Pricing Plans",
+      "type": "pricing",
+      "tags": [
+        "pricing",
+        "plans",
+        "billing"
+      ]
+    }
+  },
+  {
+    "content": "\n            # Billing FAQ\n            \n            Common billing questions:\n            \n            ## Payment Methods\n            - Credit/Debit cards\n            - PayPal\n            - Bank transfer (Enterprise only)\n            \n            ## Billing Cycle\n            - Monthly billing on signup date\n            - Annual plans get 2 months free\n            \n            ## Refunds\n            - 30-day money-back guarantee\n            - Pro-rated refunds for annual plans\n            ",
+    "metadata": {
+      "title": "Billing FAQ",
+      "type": "faq",
+      "tags": [
+        "billing",
+        "payments",
+        "refunds"
+      ]
+    }
+  }
+]

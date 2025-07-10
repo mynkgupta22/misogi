@@ -1,0 +1,25 @@
+[
+  {
+    "content": "\n            # API Integration Guide\n            \n            Our REST API uses JSON for all requests and responses. Here's how to get started:\n            \n            ## Authentication\n            1. Get your API key from the dashboard\n            2. Include it in the Authorization header:\n               Authorization: Bearer YOUR_API_KEY\n            \n            ## Common Endpoints\n            - GET /api/v1/users - List users\n            - POST /api/v1/data - Submit data\n            - PUT /api/v1/settings - Update settings\n            \n            ## Rate Limits\n            - Free tier: 1000 requests/day\n            - Pro tier: 10000 requests/day\n            ",
+    "metadata": {
+      "title": "API Integration Guide",
+      "type": "documentation",
+      "tags": [
+        "api",
+        "integration",
+        "authentication"
+      ]
+    }
+  },
+  {
+    "content": "\n            # Error Handling Guide\n            \n            Common error codes and their solutions:\n            \n            ## 400 Bad Request\n            - Check request payload format\n            - Validate required fields\n            \n            ## 401 Unauthorized\n            - Verify API key is valid\n            - Check API key permissions\n            \n            ## 429 Too Many Requests\n            - Rate limit exceeded\n            - Upgrade plan or wait for reset\n            ",
+    "metadata": {
+      "title": "Error Handling Guide",
+      "type": "documentation",
+      "tags": [
+        "errors",
+        "troubleshooting"
+      ]
+    }
+  }
+]
