@@ -1,50 +1,69 @@
 # 🛒 Quick Commerce Price Comparison Platform
 
-A natural language-powered price comparison platform for quick commerce apps (Blinkit, Zepto, Instamart, BigBasket Now, Dunzo) that helps users find the best deals across multiple platforms.
+A natural language-powered price comparison platform for quick commerce apps (Blinkit, Zepto, Instamart, BigBasket Now, Dunzo) that uses **Gemini AI** to generate SQL queries and analyze real-time pricing data from a **SQLite database**.
 
 ## 🌟 Features
 
-- **Natural Language Queries**: Ask in plain English like "Which app has cheapest onions right now?"
-- **Real-time Price Comparison**: Compare prices across 5 major quick commerce platforms
-- **Smart Discount Detection**: Find products with specific discount percentages
-- **Budget-based Deal Finder**: Get best value deals within your budget
-- **Beautiful Web Interface**: Modern, responsive UI with real-time results
-- **Rate Limiting**: Built-in security with request rate limiting
-- **Comprehensive Coverage**: 15 products across 7 categories with live pricing
+- **🤖 AI-Powered SQL Generation**: Gemini AI converts natural language to optimized SQL queries
+- **🗄️ Real SQLite Database**: Genuine database with 8 tables, indexes, and relational integrity
+- **💬 Natural Language Interface**: Ask in plain English like "Which app has cheapest onions right now?"
+- **⚡ Advanced Query Processing**: Complex JOINs, CTEs, and discount calculations
+- **📊 Real-time Analytics**: Query performance metrics and execution statistics
+- **🔍 Intelligent Table Selection**: Automatically selects optimal tables from 50+ schema objects
+- **💰 Dynamic Pricing Engine**: Real-time price updates with historical tracking
+- **🛡️ Enterprise Security**: Rate limiting, input validation, and SQL injection protection
+- **📈 Query Optimization**: Automatic query planning and performance monitoring
 
 ## 🚀 Quick Start
 
 ### Prerequisites
 - Python 3.7+
-- pip
+- Google Gemini API Key
+- pip or pip3
 
 ### Installation
 
-1. **Clone the repository**
-   ```bash
-   git clone <repo-url>
-   cd Q2
-   ```
+#### 🚀 Automated Setup (Recommended)
+```bash
+# 1. Clone the repository
+git clone <repo-url>
+cd Q2
 
-2. **Install dependencies**
-   ```bash
-   pip install -r requirements.txt
-   ```
+# 2. Create .env file with your Gemini API key
+echo "GEMINI_API_KEY=your_gemini_api_key_here" > .env
 
-3. **Run tests to verify everything works**
-   ```bash
-   python3 test_queries.py
-   ```
+# 3. Run automated setup
+python3 setup.py
+```
 
-4. **Start the web application**
-   ```bash
-   python3 app.py
-   ```
+#### 📋 Manual Setup
+```bash
+# 1. Clone the repository
+git clone <repo-url>
+cd Q2
 
-5. **Open your browser**
-   ```
-   http://localhost:5000
-   ```
+# 2. Get Gemini API Key & Create .env file
+# Visit: https://makersuite.google.com/app/apikey
+# Create .env file:
+echo "GEMINI_API_KEY=your_gemini_api_key_here" > .env
+
+# 3. Install dependencies
+pip3 install -r requirements.txt
+
+# 4. Setup SQLite database
+python3 database_setup.py
+
+# 5. Test the SQL agent
+python3 query_agent.py
+
+# 6. Start the web application
+python3 app.py
+```
+
+#### 🌐 Access the Application
+```
+http://localhost:5000
+```
 
 ## 🎯 Sample Queries
 
@@ -74,13 +93,14 @@ The platform supports these types of natural language queries:
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   Web Frontend  │ →  │  Flask Backend  │ →  │   Query Agent   │
-│   (HTML/JS)     │    │    (REST API)   │    │   (NLP Engine)  │
+│   Web Frontend  │ →  │  Flask Backend  │ →  │   SQL Agent     │
+│   (HTML/JS)     │    │    (REST API)   │    │  (Gemini AI)    │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
                                                         ↓
                                                ┌─────────────────┐
-                                               │   Mock Data     │
-                                               │   (In-Memory)   │
+                                               │ SQLite Database │
+                                               │  (8 Tables +    │
+                                               │   Indexes)      │
                                                └─────────────────┘
 ```
 
@@ -304,10 +324,13 @@ docker run -p 5000:5000 quick-commerce
 ## 🛠️ Tech Stack
 
 - **Backend**: Python 3.7+, Flask
+- **AI Engine**: Google Gemini 1.5 Flash
+- **Database**: SQLite with optimized indexes
+- **Query Processing**: AI-powered SQL generation
 - **Frontend**: HTML5, CSS3, Vanilla JavaScript
-- **Data**: In-memory Python objects (static demo)
-- **Testing**: Python unittest framework
-- **Deployment**: Gunicorn, Docker ready
+- **Data Storage**: Relational database with 8 tables
+- **Security**: Rate limiting, SQL injection protection
+- **Performance**: Query optimization and caching
 
 ## 🤝 Contributing
 

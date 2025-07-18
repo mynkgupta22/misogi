@@ -3,11 +3,25 @@ from query_agent import CommerceQueryAgent
 import time
 from datetime import datetime
 import json
+import os
+from dotenv import load_dotenv
+
+# Load environment variables from .env file
+load_dotenv()
 
 app = Flask(__name__)
 
 # Initialize the query agent
-query_agent = CommerceQueryAgent()
+try:
+    query_agent = CommerceQueryAgent()
+    print("✅ Query agent initialized successfully")
+except Exception as e:
+    print(f"❌ Failed to initialize query agent: {e}")
+    print("Please ensure:")
+    print("1. Create .env file with: GEMINI_API_KEY=your_api_key_here")
+    print("2. Get API key from: https://makersuite.google.com/app/apikey")
+    print("3. Database exists (run: python database_setup.py)")
+    query_agent = None
 
 # Simple rate limiting (in-memory store)
 request_times = {}
@@ -45,6 +59,14 @@ def api_query():
     """API endpoint to process natural language queries."""
     client_ip = request.remote_addr
     
+    # Check if query agent is available
+    if query_agent is None:
+        return jsonify({
+            'status': 'error',
+            'message': 'SQL Agent not initialized. Please check server configuration.',
+            'details': 'Ensure GEMINI_API_KEY is set and database exists.'
+        }), 503
+    
     # Check rate limiting
     if not check_rate_limit(client_ip):
         return jsonify({
@@ -67,18 +89,24 @@ def api_query():
                 'message': 'Query cannot be empty'
             }), 400
         
-        # Process the query
+        # Process the query using SQL agent
         result = query_agent.process_query(query)
         
-        # Add timestamp
+        # Add timestamp and additional metadata
         result['timestamp'] = datetime.now().isoformat()
+        result['server_info'] = {
+            'sql_backend': 'SQLite with Gemini AI',
+            'query_processed_at': datetime.now().isoformat(),
+            'api_version': '2.0'
+        }
         
         return jsonify(result)
     
     except Exception as e:
         return jsonify({
             'status': 'error',
-            'message': f'Internal server error: {str(e)}'
+            'message': f'Internal server error: {str(e)}',
+            'error_type': 'SQL_PROCESSING_ERROR'
         }), 500
 
 @app.route('/api/suggestions', methods=['GET'])
@@ -111,9 +139,16 @@ def api_suggestions():
 @app.route('/api/platforms', methods=['GET'])
 def api_platforms():
     """API endpoint to get platform information."""
+    
+    if query_agent is None:
+        return jsonify({
+            'status': 'error',
+            'message': 'SQL Agent not initialized'
+        }), 503
+        
     try:
         platforms_info = []
-        for platform in query_agent.data.platforms:
+        for platform in query_agent.platforms:
             platforms_info.append({
                 'name': platform['name'],
                 'commission': f"{platform['commission']}%",
@@ -122,7 +157,8 @@ def api_platforms():
         
         return jsonify({
             'status': 'success',
-            'platforms': platforms_info
+            'platforms': platforms_info,
+            'data_source': 'SQLite Database'
         })
     
     except Exception as e:
@@ -134,13 +170,45 @@ def api_platforms():
 @app.route('/api/health', methods=['GET'])
 def health_check():
     """Health check endpoint."""
-    return jsonify({
+    
+    health_status = {
         'status': 'healthy',
         'timestamp': datetime.now().isoformat(),
-        'total_products': len(query_agent.data.products),
-        'total_platforms': len(query_agent.data.platforms),
-        'total_categories': len(query_agent.data.categories)
-    })
+        'version': '2.0',
+        'backend': 'SQLite + Gemini AI'
+    }
+    
+    if query_agent is None:
+        health_status.update({
+            'status': 'unhealthy',
+            'error': 'SQL Agent not initialized',
+            'database_connected': False,
+            'gemini_api_available': False
+        })
+        return jsonify(health_status), 503
+    
+    try:
+        # Get database statistics
+        db_stats = query_agent.get_database_stats()
+        health_status.update({
+            'database_connected': True,
+            'database_stats': db_stats,
+            'gemini_api_available': True,
+            'total_products': db_stats.get('products', 0),
+            'total_platforms': db_stats.get('platforms', 0),
+            'total_categories': db_stats.get('categories', 0),
+            'queries_today': db_stats.get('queries_today', 0)
+        })
+        
+    except Exception as e:
+        health_status.update({
+            'status': 'degraded',
+            'database_connected': False,
+            'error': str(e)
+        })
+        return jsonify(health_status), 503
+    
+    return jsonify(health_status)
 
 if __name__ == '__main__':
     app.run(debug=True, host='0.0.0.0', port=5001) 
